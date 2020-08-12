@@ -13,9 +13,11 @@
     <div ng-controller="LunchCheckController">
         <h3>What do you usually have for lunch</h3>
         <p>Does NOT consider empty items.</p>
-        <input type="text" placeholder="comma separated list of items" ng-model="input">
+        <input type="text" placeholder="comma separated list of items" 
+            ng-model="input"
+            style="border-color: {{color}};">
         <button ng-click="showMsg()">Check If Too Much!</button> <br />
-        <p>{{message}}</p>
+        <p style="color: {{color}};">{{message}}</p>
     </div>
 </body>
 </html>

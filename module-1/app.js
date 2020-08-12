@@ -9,16 +9,20 @@
     function LunchCheckControllerFn($scope) {
         $scope.message = "";
         $scope.input = "";
+        $scope.color = "black";
         $scope.showMsg = function () {
             var count = countItems($scope.input);
             if(count == 0) {
                 $scope.message = "Please enter data first";
+                $scope.color = "red";
             }
             else if(count <= 3) {
                 $scope.message = "Enjoy!";
+                $scope.color = "green";
             }
             else if(count > 3) {
                 $scope.message = "Too much!";
+                $scope.color = "green";
             }
         };
     }
